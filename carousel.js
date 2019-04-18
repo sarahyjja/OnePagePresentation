@@ -10,5 +10,15 @@ const elements = {
   btn: {
     left: document.querySelector('.btnLeft'),
     right: document.querySelector('.btnRight')
-  }
-}
+  };
+};
+
+// Setup the event listeners for my buttons
+function EventListeners() {
+  elements.btn.left.onclick = function() {
+    displayPrevious()
+  };
+  elements.btn.right.onclick = function() {
+    displayNext()
+  };
+};
