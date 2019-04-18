@@ -1,0 +1,9 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.carousel {
+  background-color: yellow;
+  width: 100%;
+}
