@@ -1,8 +1,8 @@
 // Create an empty array variable to store my images and define their positions in the carousel
 const imgCarousel = [];
-imgCarousel[0] = "img/pic01.jpg";
-imgCarousel[1] = "img/pic02.jpg";
-imgCarousel[2] = "img/pic03.jpg";
+imgCarousel[0] = "./img/pic01.jpg";
+imgCarousel[1] = "./img/pic02.jpg";
+imgCarousel[2] = "./img/pic03.jpg";
 
 // Reeditable variables for the buttons logic
 let i = 0;
@@ -18,7 +18,7 @@ const elements = {
 };
 
 // Setup the event listeners for my buttons
-function EventListeners() {
+function eventListeners() {
   elements.btn.left.onclick = function() {
     displayPrevious()
   };
@@ -37,3 +37,14 @@ function displayNext() {
   (i >= x) ? i = 0 : i++;
   changeImg(i);
 };
+
+// Call of the hardcoded images and create a function who will be used to change them depending on index
+function changeImg() {
+  elements.carousel.style.backgroundImage = 'url(' + imgCarousel[i] + ')';
+};
+
+// Make the calls to display the carousel = controller
+let initialize = (function() {
+  eventListeners();
+  changeImg(i);
+})();
