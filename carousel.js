@@ -8,6 +8,18 @@ imgCarousel[2] = "./img/pic03.jpg";
 let i = 0;
 let x = (imgCarousel.length) - 1;
 
+// Setup rotation timing when no click
+let int = 3000;
+interval = setInterval(displayNext, int);
+
+function startInterval() {
+  interval = setInterval(displayNext, int);
+};
+
+function stopInterval() {
+  clearInterval(interval);
+};
+
 // Setup the elements of my HTML page
 const elements = {
   carousel: document.querySelector('.carousel'),
