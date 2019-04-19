@@ -8,31 +8,73 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background-color: yellow;
+  /* background-color: yellow; */
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .header h1 {
-  color: red;
+  color: #000;
+  align-self: flex-start;
+  margin-left: 12%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3em;
 }
 
 .header h2 {
-  color: blue;
+  color: #000;
+  align-self: flex-start;
+  margin-left: 12%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.5em;
 }
 
 .main {
-  background-color: greenyellow;
+  /* background-color: greenyellow; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.main h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.4em;
+  align-self: flex-start;
+  margin-left: 12%;
+  padding-bottom: 10px;
+}
+
+.main p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
+  text-align: justify;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.links li {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: yellow;
+}
+
 .carousel {
   display: flex;
-  height:550px;
-  width:70%;
+  height:580px;
+  width:75%;
   background-repeat: no-repeat;
   background-size: cover;
+  border: 10px solid #000;
 }
 
 .buttons {
@@ -75,7 +117,13 @@
 }
 
 .footer {
-  background-color: pink;
+  /* background-color: pink; */
   width: 100%;
   text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.footer p {
+  font-size: 2em;
 }
