@@ -34,14 +34,21 @@
 }
 
 .buttons {
-  background-color: pink;
+  /* background-color: pink; */
   display: flex;
   justify-content: space-between;
   width: 70%;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .btnLeft {
-  background-color: dodgerblue;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #000;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
 }
 
 .btnLeft:hover {
@@ -49,7 +56,12 @@
 }
 
 .btnRight {
-  background-color: yellow;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #000;
+  color: #000;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1em;
 }
 
 .btnRight:hover {
@@ -68,4 +80,5 @@ img {
 .footer {
   background-color: pink;
   width: 100%;
+  text-align: center;
 }
