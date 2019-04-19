@@ -3,6 +3,27 @@
   margin: 0px;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: yellow;
+}
+
+.header h1 {
+  color: red;
+}
+
+.header h2 {
+  color: blue;
+}
+
+.main {
+  background-color: greenyellow;
+  width: 100%;
+}
+
 .carousel {
   background-color: yellow;
   width: 100%;
@@ -51,4 +72,9 @@
 
 .hiddenImages {
   display: none;
+}
+
+.footer {
+  background-color: pink;
+  width: 100%;
 }
