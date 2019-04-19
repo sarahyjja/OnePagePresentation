@@ -29,8 +29,10 @@
 
 .carousel {
   display: flex;
-  height:400px;
+  height:550px;
   width:70%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .buttons {
@@ -70,11 +72,6 @@
 
 .hiddenImages {
   display: none;
-}
-
-img {
-  width: 100%;
-  background-repeat: no-repeat;
 }
 
 .footer {
