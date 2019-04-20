@@ -162,3 +162,72 @@
   }
 
 }
+
+
+@media screen and (max-width:1024px) {
+
+.main h2 {
+font-size: 2.3em;
+width: 70%;
+}
+
+.main h3 {
+font-size: 2.3em;
+width: 70%;
+}
+
+.main p {
+line-height: 1.5em;
+width: 70%;
+}
+
+.links {
+width: 70%;
+height: 65px;
+/* margin-left: 15%; */
+}
+
+.links li {
+padding: 10px;
+font-size: 1em;
+}
+
+.carousel {
+width:70%;
+}
+
+.buttons {
+justify-content: flex-end;
+width: 70%;
+}
+
+.btnLeft {
+color: #ccc;
+font-size: 3em;
+}
+
+.btnLeft:hover {
+cursor:pointer;
+color: #333;
+}
+
+.btnRight {
+color: #ccc;
+font-size: 3em;
+}
+
+.btnRight:hover {
+cursor:pointer;
+color: #333;
+}
+
+.footer {
+  margin-top: 0px;
+}
+
+.footer p {
+font-size: 1em;
+letter-spacing: 0px;
+margin-bottom: 0px;
+}
+}
