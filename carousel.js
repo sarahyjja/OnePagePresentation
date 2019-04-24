@@ -34,15 +34,22 @@ const elements = {
   }
 };
 
-// Setup the event listeners for my buttons
-function eventListeners() {
-  elements.btn.left.onclick = function() {
+// Setup the event listeners for my buttons and keyboard
+elements.btn.left.onclick = function() {
     displayPrevious()
   };
   elements.btn.right.onclick = function() {
     displayNext()
   };
-};
+
+  document.addEventListener('keyup', function(e){
+    if(e.keyCode == '37'){
+      displayPrevious()
+    }
+    if(e.keyCode == '39'){
+      displayNext()
+    }
+  })
 
 // Create the buttons logic depending on the amount of images of the imgCarousel variable
 function displayPrevious() {
