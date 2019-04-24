@@ -1,3 +1,6 @@
+// Create an eventListener for the whole file so it can be read at the top of HTML and stop using the last function controller
+document.addEventListener('DOMContentLoaded', function() {
+
 // Create an empty array variable to store my images and define their positions in the carousel
 const imgCarousel = [];
 imgCarousel[0] = "./img/1.jpg";
@@ -58,7 +61,9 @@ function changeImg() {
 };
 
 // Make the calls to display the carousel = controller
-let initialize = (function() {
-  eventListeners();
-  changeImg(i);
-})();
+let initialize = function() {
+    changeImg(i);
+  };
+
+  initialize();
+})
