@@ -1,41 +1,24 @@
 // Create an eventListener for the whole file so it can be read at the top of HTML and stop using the last function controller
 document.addEventListener('DOMContentLoaded', function() {
 
-// Create an empty array variable to store my images and define their positions in the carousel
-const imgCarousel = [];
-imgCarousel[0] = "./img/1.jpg";
-imgCarousel[1] = "./img/2.jpg";
-imgCarousel[2] = "./img/3.jpg";
-imgCarousel[3] = "./img/4.jpg";
-imgCarousel[4] = "./img/5.jpg";
+  // Create an empty array variable to store my images and define their positions in the carousel
+  const imgCarousel = ["./img/1.jpg", "./img/2.jpg", "./img/3.jpg", "./img/4.jpg", "./img/5.jpg"];
 
-// Reeditable variables for the buttons logic
-let i = 0;
-let x = (imgCarousel.length) - 1;
+  // Reeditable variables for the buttons logic
+  let i = 0;
+  let x = (imgCarousel.length) - 1;
 
-// Setup rotation timing when no click
-let int = 2000;
-interval = setInterval(displayNext, int);
+  // Setup the elements of my HTML page
+  const elements = {
+    carousel: document.querySelector('.carousel'),
+    btn: {
+      left: document.querySelector('.btnLeft'),
+      right: document.querySelector('.btnRight')
+    }
+  };
 
-function startInterval() {
-  interval = setInterval(displayNext, int);
-};
-
-function stopInterval() {
-  clearInterval(interval);
-};
-
-// Setup the elements of my HTML page
-const elements = {
-  carousel: document.querySelector('.carousel'),
-  btn: {
-    left: document.querySelector('.btnLeft'),
-    right: document.querySelector('.btnRight')
-  }
-};
-
-// Setup the event listeners for my buttons and keyboard
-elements.btn.left.onclick = function() {
+  // Setup the eventListeners for my buttons and keyboard
+  elements.btn.left.onclick = function() {
     displayPrevious()
   };
   elements.btn.right.onclick = function() {
@@ -49,26 +32,38 @@ elements.btn.left.onclick = function() {
     if(e.keyCode == '39'){
       displayNext()
     }
-  })
+  });
 
-// Create the buttons logic depending on the amount of images of the imgCarousel variable
-function displayPrevious() {
-  (i <= 0) ? i = 4 : i--;
-  changeImg(i);
-};
+  // Setup rotation timing when no click
+  let int = 3000;
+  interval = setInterval(displayNext, int);
 
-function displayNext() {
-  (i >= x) ? i = 0 : i++;
-  changeImg(i);
-};
+  function startInterval() {
+    interval = setInterval(displayNext, int);
+  };
 
-// Call of the hardcoded images and create a function who will be used to change them depending on index
-function changeImg() {
-  elements.carousel.style.backgroundImage = 'url(' + imgCarousel[i] + ')';
-};
+  function stopInterval() {
+    clearInterval(interval);
+  };
 
-// Make the calls to display the carousel = controller
-let initialize = function() {
+  // Create the buttons logic depending on the amount of images of the imgCarousel variable
+  function displayPrevious() {
+    (i <= 0) ? i = 4 : i--;
+    changeImg(i);
+  };
+
+  function displayNext() {
+    (i >= x) ? i = 0 : i++;
+    changeImg(i);
+  };
+
+  // Call of the hardcoded images and create a function who will be used to change them depending on index
+  function changeImg() {
+    elements.carousel.style.backgroundImage = 'url(' + imgCarousel[i] + ')';
+  };
+
+  // Make the calls to display the carousel = controller
+  let initialize = function() {
     changeImg(i);
   };
 
