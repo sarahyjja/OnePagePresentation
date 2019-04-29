@@ -100,13 +100,20 @@
 }
 
 .btnLeft {
-  padding-right: 10px;
   background-color: #FFF;
   border: none;
   color: #333;
   font-family: 'Quicksand', sans-serif;
   font-size: 6em;
   padding-right: 20px;
+}
+
+.btnStop {
+  background-color: #FFF;
+  border: none;
+  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 6em;
 }
 
 .btnRight {
@@ -186,40 +193,39 @@
 @media screen and (min-width:1024px){
   .header{
     margin-bottom: 60px;
-    max-width: 1200px;
+    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .header h1 {
     font-size: 2em;
-    max-width: 1200px;
+    max-width: 1024px;
     margin-left: 0px;
   }
 
   .main h2 {
     font-size: 8em;
     padding-right: 60px;
-    max-width: 1200px;
+    max-width: 1024px;
   }
 
   .main h3 {
     font-size: 3.8em;
     padding-left: 470px;
     padding-bottom: 50px;
-    max-width: 1200px;
+    max-width: 1024px;
   }
 
   .main p{
-    max-width: 1200px;
+    max-width: 1024px;
     font-size: 1.5em;
   }
   .links {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
-    max-width: 1200px;
+    max-width: 1024px;
     height: 245px;
     margin-top: 70px;
     margin-bottom: 50px;
@@ -251,32 +257,37 @@
   }
 
   .carousel {
-    max-width: 1200px;
+    max-width: 1024px;
     height: 900px;
   }
 
   .buttons {
-    max-width: 1200px;
+    max-width: 1024px;
   }
 
   .btnLeft {
     padding-right: 10px;
-    background-color: #FFF;
-    border: none;
     color: #ccc;
-    font-family: 'Quicksand', sans-serif;
+    font-size: 5em;
+  }
+
+  .btnStop {
+    color: #ccc;
     font-size: 5em;
   }
 
   .btnRight {
-    background-color: #FFF;
-    border: none;
     color: #ccc;
-    font-family: 'Quicksand', sans-serif;
     font-size: 5em;
+    padding-left: 10px;
   }
 
   .btnLeft:hover {
+    cursor:pointer;
+    color: #333;
+  }
+
+  .btnStop:hover {
     cursor:pointer;
     color: #333;
   }

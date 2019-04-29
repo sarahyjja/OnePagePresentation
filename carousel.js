@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     carousel: document.querySelector('.carousel'),
     btn: {
       left: document.querySelector('.btnLeft'),
-      right: document.querySelector('.btnRight')
+      right: document.querySelector('.btnRight'),
+      stop: document.querySelector('.btnStop')
     }
   };
 
@@ -18,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
   };
   elements.btn.right.onclick = function() {
     displayNext()
+  };
+
+  elements.btn.stop.onclick = function() {
+    controlStop()
   };
 
   document.addEventListener('keyup', function(e){
@@ -29,8 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  let int = 3000;
-  interval = setInterval(displayNext, int);
+  let int = 2000;
+  let interval = 0;
+  let play = true;
 
   function startInterval() {
     interval = setInterval(displayNext, int);
@@ -50,11 +56,22 @@ document.addEventListener('DOMContentLoaded', function() {
     changeImg(i);
   };
 
+  function controlStop() {
+    if(play === true){
+      play = false;
+      stopInterval();
+    } else {
+      play = true;
+      startInterval();
+    }
+  }
+
   function changeImg() {
     elements.carousel.style.backgroundImage = 'url(' + imgCarousel[i] + ')';
   };
 
   let initialize = function() {
+    startInterval();
     changeImg(i);
   };
 
